@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import getSquares from './components/getSquares';
+import Squares from './components/Squares';
 import './styles/App.css';
 
 function App() {
-  const area = Array.from({length: 10}, el => new Array(10));
+  const area = Array.from({length: 10}, el => Array.from({length: 10}, k => 0));
   
 
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
     
-    <getSquares squares={area}/>
+    <Squares squares={area}/>
       
     </div>
   );
